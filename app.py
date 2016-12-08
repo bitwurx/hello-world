@@ -4,7 +4,7 @@ import tornado.ioloop
 
 class HelloWorldHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write('Hello, World!')
+        self.write('Hello, World!\n')
 
 
 if __name__ == '__main__':
@@ -12,4 +12,5 @@ if __name__ == '__main__':
         (r'^/', HelloWorldHandler)
     ])
     app.listen(8080)
-    torando.ioloop.IOLoop.current().start()
+    print('starting sever on :8080...')
+    tornado.ioloop.IOLoop.current().start()
